@@ -2,14 +2,14 @@
 let source = 'the-wall-street-journal';
 let apiKey = '95c7c91fe9d0402f8c5a728f5f5783de'
 
-// Grab the news container
+//news container
 let newsAccordion = document.getElementById('newsAccordion');
 
-// Create an ajax get request
+//ajax get request
 const xhr = new XMLHttpRequest();
 xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`, true);
 
-// What to do when response is ready
+//response is ready
 xhr.onload = function () {
     if (this.status === 200) {
         let json = JSON.parse(this.responseText);
